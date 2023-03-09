@@ -63,7 +63,6 @@ class FooterListDetailsType extends AbstractResourceType
                         $names[] = $detail->getName();
                     }
                 }
-
                 if (!$socialMedia instanceof FooterListDetailsInterface || null === $socialMedia->getId()) {
                     return array_merge($this->validationGroups, ['dotit_list_create']);
                 }
