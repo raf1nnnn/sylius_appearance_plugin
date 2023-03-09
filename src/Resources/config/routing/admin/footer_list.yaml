@@ -1,0 +1,18 @@
+dotit_sylius_appearance_plugin_admin_footer_list:
+  resource: |
+    alias: dotit_sylius_appearance_plugin.footer_list
+    section: admin
+    templates: "@SyliusAdmin/Crud"
+    except: ['show']
+    redirect: index
+    grid: dotit_sylius_appearance_plugin_admin_footer_list
+    permission: true
+    vars:
+        all:
+            subheader: dotit_sylius_appearance_plugin.ui.footer_lists
+            templates:
+                form: '@DotitSyliusAppearancePlugin/Admin/footer_list/_form.html.twig'
+        index:
+            icon: trademark
+  type: sylius.resource
+

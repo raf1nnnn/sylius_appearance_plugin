@@ -1,0 +1,4 @@
+imports:
+    - { resource: resources/social_media.yaml }
+    - { resource: resources/footer_list.yaml }
+    - { resource: resources/footer_list_details.yaml }

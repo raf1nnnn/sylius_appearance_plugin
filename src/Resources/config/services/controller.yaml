@@ -1,0 +1,6 @@
+services:
+  dotit_sylius_appearance_plugin.controller.social_media_slug:
+    class: Dotit\SyliusAppearancePlugin\Controller\SocialMediaSlugController
+    public: true
+    arguments:
+      - '@sylius.generator.slug'

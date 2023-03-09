@@ -1,0 +1,52 @@
+sylius_grid:
+  grids:
+    dotit_sylius_appearance_plugin_admin_footer_list:
+      driver:
+        name: doctrine/orm
+        options:
+          class: "%dotit_sylius_appearance_plugin.model.footer_list.class%"
+      sorting:
+        createdAt: asc
+      fields:
+        name:
+          type: string
+          label: sylius.ui.name
+          sortable: ~
+        slug:
+          type: string
+          label: sylius.ui.slug
+          sortable: ~
+        description:
+          type: string
+          label: Description
+          sortable: ~
+        enabled:
+          type: twig
+          label: sylius.ui.enabled
+          sortable: ~
+          options:
+            template: "@SyliusUi/Grid/Field/enabled.html.twig"
+
+        createdAt:
+          type: datetime
+          label: sylius.ui.creation_date
+          sortable: ~
+          options:
+            format: d-m-Y H:i
+      filters:
+        name:
+          type: string
+          label: sylius.ui.name
+        createdAt:
+          type: date
+          label: sylius.ui.creation_date
+      actions:
+        main:
+          create:
+            type: create
+
+        item:
+          update:
+            type: update
+          delete:
+            type: delete

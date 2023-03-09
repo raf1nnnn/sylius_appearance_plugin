@@ -1,0 +1,8 @@
+<form id="dotit-update-footer_lists" class="dotit-update-footer_lists" action="{{ path('dotit_sylius_appearance_plugin_admin_footer_list_update_position') }}" method="post">
+    <input type="hidden" name="_method" value="PUT" />
+    <input type="hidden" name="_csrf_token" value="{{ csrf_token('update-footer_list-position') }}" />
+    <button class="ui labeled loadable icon button sylius-save-position" type="submit">
+        <i class="icon checkmark"></i>
+        {{ 'sylius.ui.save_positions'|trans }}
+    </button>
+</form>

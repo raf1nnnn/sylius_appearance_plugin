@@ -1,0 +1,8 @@
+<form id="dotit-update-social_medias" class="dotit-update-social_medias" action="{{ path('dotit_sylius_appearance_plugin_admin_social_media_update_position') }}" method="post">
+    <input type="hidden" name="_method" value="PUT" />
+    <input type="hidden" name="_csrf_token" value="{{ csrf_token('update-social_media-position') }}" />
+    <button class="ui labeled loadable icon button sylius-save-position" type="submit">
+        <i class="icon checkmark"></i>
+        {{ 'sylius.ui.save_positions'|trans }}
+    </button>
+</form>

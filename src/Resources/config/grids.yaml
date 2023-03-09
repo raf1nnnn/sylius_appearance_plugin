@@ -1,0 +1,4 @@
+imports:
+  - { resource: grids/admin/social_media.yaml }
+  - { resource: grids/admin/footer_list.yaml }
+

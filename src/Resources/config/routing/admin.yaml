@@ -1,0 +1,9 @@
+dotit_sylius_appearance_plugin_admin_social_media:
+  resource: admin/social_media.yaml
+
+dotit_sylius_appearance_plugin_admin_social_media_ajax:
+  resource: admin/ajax.yaml
+  prefix: /ajax
+
+dotit_sylius_appearance_plugin_admin_footer_list:
+  resource: admin/footer_list.yaml

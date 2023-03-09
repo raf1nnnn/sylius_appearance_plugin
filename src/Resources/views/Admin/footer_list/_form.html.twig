@@ -1,0 +1,2 @@
+{% set menu = knp_menu_get('dotit_sylius_appearance_plugin.admin.footer_list_form', [], {'footer_list': footer_list}) %}
+{{ knp_menu_render(menu, {'template': '@DotitSyliusAppearancePlugin/Admin/footer_list/_menu.html.twig', 'form': form, 'footer_list': footer_list}) }}

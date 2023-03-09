@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+
+<serializer xmlns="http://symfony.com/schema/dic/serializer-mapping"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://symfony.com/schema/dic/serializer-mapping https://symfony.com/schema/dic/serializer-mapping/serializer-mapping-1.0.xsd"
+>
+    <class name="Dotit\SyliusAppearancePlugin\Entity\FooterList">
+        <attribute name="id">
+            <group>admin:footer:read</group>
+            <group>shop:footer:read</group>
+        </attribute>
+        <attribute name="slug">
+            <group>admin:footer:create</group>
+            <group>admin:footer:read</group>
+            <group>admin:footer:update</group>
+            <group>shop:footer:read</group>
+        </attribute>
+        <attribute name="name">
+            <group>admin:footer:create</group>
+            <group>admin:footer:read</group>
+            <group>admin:footer:update</group>
+            <group>shop:footer:read</group>
+        </attribute>
+        <attribute name="description">
+            <group>admin:footer:create</group>
+            <group>admin:footer:read</group>
+            <group>admin:footer:update</group>
+            <group>shop:footer:read</group>
+        </attribute>
+        <attribute name="footerListDetails">
+            <group>admin:footer:create</group>
+            <group>admin:footer:read</group>
+            <group>admin:footer:update</group>
+            <group>shop:footer:read</group>
+        </attribute>
+
+        <attribute name="createdAt">
+            <group>admin:footer:read</group>
+            <group>shop:footer:read</group>
+        </attribute>
+        <attribute name="updatedAt">
+            <group>admin:footer:read</group>
+            <group>shop:footer:read</group>
+        </attribute>
+    </class>
+</serializer>

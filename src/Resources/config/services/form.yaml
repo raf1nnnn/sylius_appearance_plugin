@@ -1,0 +1,27 @@
+services:
+
+  dotit_sylius_appearance_plugin.form.type.social_media:
+    class: Dotit\SyliusAppearancePlugin\Form\Type\SocialMediaType
+    arguments:
+      - '%dotit_sylius_appearance_plugin.model.social_media.class%'
+      - ['dotit']
+    tags:
+      - { name: form.type, alias: odiseo_sylius_vendor }
+
+
+
+  dotit_sylius_appearance_plugin.form.type.footer_list:
+    class: Dotit\SyliusAppearancePlugin\Form\Type\FooterListType
+    arguments:
+      - '%dotit_sylius_appearance_plugin.model.footer_list.class%'
+      - [ 'dotit' ]
+    tags:
+      - { name: form.type, alias: odiseo_sylius_vendor }
+
+  dotit_sylius_appearance_plugin.form.type.footer_list_details:
+    class: Dotit\SyliusAppearancePlugin\Form\Type\FooterListDetailsType
+    arguments:
+      - '%dotit_sylius_appearance_plugin.model.footer_list_details.class%'
+      - [ 'dotit' ]
+    tags:
+      - { name: form.type, alias: odiseo_sylius_vendor }

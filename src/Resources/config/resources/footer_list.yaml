@@ -1,0 +1,9 @@
+sylius_resource:
+  resources:
+    dotit_sylius_appearance_plugin.footer_list:
+      driver: doctrine/orm
+      classes:
+        model: Dotit\SyliusAppearancePlugin\Entity\FooterList
+        interface: Dotit\SyliusAppearancePlugin\Entity\FooterListInterface
+        factory: Sylius\Component\Resource\Factory\Factory
+        form: Dotit\SyliusAppearancePlugin\Form\Type\FooterListType

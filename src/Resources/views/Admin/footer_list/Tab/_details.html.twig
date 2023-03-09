@@ -1,0 +1,37 @@
+<div class="ui active tab" data-tab="details">
+    <h3 class="ui top attached header">{{ 'sylius.ui.details'|trans }}</h3>
+
+    <div class="ui attached segment">
+        <div class="ui two column stackable grid">
+            <div class="column">
+                <div class="ui segment">
+                    {{ form_row(form.name) }}
+                    {% include '@DotitSyliusAppearancePlugin/Field/_slug.html.twig' with { 'slugField': form.slug } %}
+                    <br>
+
+
+                </div>
+            </div>
+            <div class="column">
+                <div class="ui segment">
+
+                    {{ form_row(form.description) }} <br>
+                    {{ form_row(form.enabled) }}
+
+                </div>
+            </div>
+        </div>
+        <div class="ui one column stackable grid">
+
+            <div class="column">
+                <div class="ui segment">
+                    {{ form_row(form.footerListDetails) }}<br>
+
+                </div>
+            </div>
+        </div>
+
+
+        {{ sylius_template_event(['dotit_sylius_appearance_plugin.admin.footer_list.' ~ action ~ '.tab_details', 'dotit_sylius_appearance_plugin.admin.footer_list.tab_details'], {'form': form}) }}
+    </div>
+</div>

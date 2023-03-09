@@ -1,0 +1,11 @@
+sylius_resource:
+    resources:
+        dotit_sylius_appearance_plugin.social_media:
+            driver: doctrine/orm
+            classes:
+                model: Dotit\SyliusAppearancePlugin\Entity\SocialMedia
+                interface: Dotit\SyliusAppearancePlugin\Entity\SocialMediaInterface
+                form: Dotit\SyliusAppearancePlugin\Form\Type\SocialMediaType
+                repository: Dotit\SyliusAppearancePlugin\Repository\SocialMediaRepository
+                controller: Dotit\SyliusAppearancePlugin\Controller\SocialMediaController
+                factory: Sylius\Component\Resource\Factory\Factory

@@ -1,0 +1,13 @@
+services:
+  dotit_sylius_appearance_plugin.filesystem.social_media_logo:
+    class: Gaufrette\Filesystem
+    arguments:
+      - 'social_media_logo'
+    factory:
+      - '@knp_gaufrette.filesystem_map'
+      - 'get'
+
+  dotit_sylius_appearance_plugin.uploader.social_media_logo:
+    class: Dotit\SyliusAppearancePlugin\Uploader\SocialMediaUploader
+    arguments:
+      - '@dotit_sylius_appearance_plugin.filesystem.social_media_logo'

@@ -1,0 +1,85 @@
+<?xml version="1.0" ?>
+
+<serializer xmlns="http://symfony.com/schema/dic/serializer-mapping"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://symfony.com/schema/dic/serializer-mapping https://symfony.com/schema/dic/serializer-mapping/serializer-mapping-1.0.xsd"
+>
+    <class name="Dotit\SyliusAppearancePlugin\Entity\SocialMedia">
+        <attribute name="id">
+            <group>admin:social:read</group>
+            <group>shop:social:read</group>
+        </attribute>
+        <attribute name="slug">
+            <group>admin:social:create</group>
+            <group>admin:social:read</group>
+            <group>admin:social:update</group>
+            <group>shop:social:read</group>
+        </attribute>
+        <attribute name="name">
+            <group>admin:social:create</group>
+            <group>admin:social:read</group>
+            <group>admin:social:update</group>
+            <group>shop:social:read</group>
+        </attribute>
+        <attribute name="address">
+            <group>admin:social:create</group>
+            <group>admin:social:read</group>
+            <group>admin:social:update</group>
+            <group>shop:social:read</group>
+        </attribute>
+        <attribute name="phoneNumber">
+            <group>admin:social:create</group>
+            <group>admin:social:read</group>
+            <group>admin:social:update</group>
+            <group>shop:social:read</group>
+            <group>shop:social:create</group>
+        </attribute>
+        <attribute name="longitude">
+            <group>admin:social:create</group>
+            <group>admin:social:read</group>
+            <group>admin:social:update</group>
+            <group>shop:social:read</group>
+            <group>shop:social:create</group>
+        </attribute>
+        <attribute name="latitude">
+            <group>admin:social:create</group>
+            <group>admin:social:read</group>
+            <group>admin:social:update</group>
+            <group>shop:social:read</group>
+            <group>shop:social:create</group>
+        </attribute>
+        <attribute name="logoName">
+            <group>admin:social:create</group>
+            <group>admin:social:read</group>
+            <group>admin:social:update</group>
+            <group>shop:social:read</group>
+        </attribute>
+        <attribute name="logoPath">
+            <group>admin:social:create</group>
+            <group>admin:social:read</group>
+            <group>admin:social:update</group>
+            <group>shop:social:read</group>
+        </attribute>
+
+        <attribute name="enabled">
+            <group>admin:social:create</group>
+            <group>admin:social:read</group>
+            <group>admin:social:update</group>
+            <group>shop:social:read</group>
+        </attribute>
+        <attribute name="picking">
+            <group>admin:social:create</group>
+            <group>admin:social:read</group>
+            <group>admin:social:update</group>
+            <group>shop:social:read</group>
+        </attribute>
+        <attribute name="createdAt">
+            <group>admin:social:read</group>
+            <group>shop:social:read</group>
+        </attribute>
+        <attribute name="updatedAt">
+            <group>admin:social:read</group>
+            <group>shop:social:read</group>
+        </attribute>
+    </class>
+</serializer>

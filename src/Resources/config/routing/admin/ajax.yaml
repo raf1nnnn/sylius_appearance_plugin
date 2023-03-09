@@ -1,0 +1,3 @@
+store_sylius_appearance_plugin_admin_ajax_social_media:
+  resource: ajax/social_media.yaml
+  prefix: /social-media

@@ -1,0 +1,37 @@
+services:
+  dotit_sylius_appearance_plugin.event_listener.admin.menu_builder:
+    class: Dotit\SyliusAppearancePlugin\Menu\AdminMenuListener
+    tags:
+      - { name: kernel.event_listener, event: sylius.menu.admin.main, method: addAdminMenuItems }
+
+  dotit_sylius_appearance_plugin.menu_builder.admin.social_media_form:
+    class: Dotit\SyliusAppearancePlugin\Menu\SocialMediaFormMenuBuilder
+    arguments:
+      - '@knp_menu.factory'
+      - '@event_dispatcher'
+    tags:
+      - { name: knp_menu.menu_builder, method: createMenu, alias: dotit_sylius_appearance_plugin.admin.social_media_form }
+
+  dotit_sylius_appearance_plugin.menu_builder.admin.social_footer_list:
+    class: Dotit\SyliusAppearancePlugin\Menu\FooterListFormMenuBuilder
+    arguments:
+      - '@knp_menu.factory'
+      - '@event_dispatcher'
+    tags:
+      - { name: knp_menu.menu_builder, method: createMenu, alias: dotit_sylius_appearance_plugin.admin.footer_list_form }
+
+
+  dotit_sylius_appearance_plugin.event_listener.social_media_logo_upload:
+    class: Dotit\SyliusAppearancePlugin\EventListener\SocialMediaLogoUploadListener
+    arguments:
+      - '@dotit_sylius_appearance_plugin.uploader.social_media_logo'
+    tags:
+      - { name: kernel.event_listener, event: dotit_sylius_appearance_plugin.social_media.pre_create, method: uploadLogo }
+      - { name: kernel.event_listener, event: dotit_sylius_appearance_plugin.social_media.pre_update, method: uploadLogo }
+
+  dotit_sylius_appearance_plugin.block_event_listener.layout.social_media.javascripts:
+    class: Dotit\SyliusAppearancePlugin\Block\SocialMediaJsBlockListener
+    tags:
+      - { name: kernel.event_listener, event: sonata.block.event.sylius.admin.layout.javascripts, method: onBlockEvent }
+
+

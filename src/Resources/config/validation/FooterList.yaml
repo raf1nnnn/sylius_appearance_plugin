@@ -1,0 +1,48 @@
+Dotit\SyliusAppearancePlugin\Entity\FooterList:
+  constraints:
+    - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+        fields: [name]
+        message: 'dotit_sylius_appearance_plugin.footer_list.name.unique'
+        groups: ['dotit_logo_create']
+    - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+        fields: [slug]
+        message: 'dotit_sylius_appearance_plugin.footer_list.slug.unique'
+        groups: ['dotit_logo_create']
+
+  properties:
+    name:
+      - NotBlank:
+          message: 'dotit_sylius_appearance_plugin.footer_list.name.not_blank'
+          groups: ['dotit_logo_create']
+      - Length:
+          min: 2
+          max: 250
+          minMessage: 'dotit_sylius_appearance_plugin.footer_list.name.min_length'
+          maxMessage: 'dotit_sylius_appearance_plugin.footer_list.name.max_length'
+          groups: ['dotit_logo_create']
+    description:
+      - NotBlank:
+          message: 'dotit_sylius_appearance_plugin.footer_list.url.not_blank'
+          groups: [ 'dotit_logo_create' ]
+      - Length:
+          min: 2
+          max: 250
+          minMessage: 'dotit_sylius_appearance_plugin.footer_list.description.min_length'
+          maxMessage: 'dotit_sylius_appearance_plugin.footer_list.description.max_length'
+          groups: [ 'dotit_logo_create' ]
+
+    slug:
+      - NotBlank:
+          message: 'dotit_sylius_appearance_plugin.footer_list.slug.not_blank'
+          groups: ['dotit_logo_create']
+      - Length:
+          min: 2
+          max: 250
+          minMessage: 'dotit_sylius_appearance_plugin.footer_list.slug.min_length'
+          maxMessage: 'dotit_sylius_appearance_plugin.footer_list.slug.max_length'
+          groups: ['dotit_logo_create']
+
+    footerListDetails:
+      - Valid: ~
+
+
