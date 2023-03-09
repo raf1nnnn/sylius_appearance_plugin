@@ -1,12 +1,12 @@
 dotit_sylius_appearance_plugin:
     social_media:
         slug:
-            unique: There is an existing store with this slug.
+            unique: There is an existing social media with this slug.
             not_blank: Slug cannot be blank.
             min_length: Slug must be at least {{ limit }} characters long.
             max_length: Slug can not be longer than {{ limit }} characters.
         name:
-            unique: There is an existing store with this name.
+            unique: There is an existing social media with this name.
             not_blank: Name cannot be blank.
             min_length: Name must be at least {{ limit }} characters long.
             max_length: Name can not be longer than {{ limit }} characters.
@@ -47,7 +47,7 @@ dotit_sylius_appearance_plugin:
 
     footer_list:
         slug:
-            unique: There is an existing store with this slug.
+            unique: There is an existing Footer list with this slug.
             not_blank: Slug cannot be blank.
             min_length: Slug must be at least {{ limit }} characters long.
             max_length: Slug can not be longer than {{ limit }} characters.
@@ -58,7 +58,7 @@ dotit_sylius_appearance_plugin:
             max_length: Name can not be longer than {{ limit }} characters.
 
         description:
-            unique: There is an existing store with this description.
+            unique: There is an existing Footer list with this description.
             not_blank: Description cannot be blank.
             min_length: Description must be at least {{ limit }} characters long.
             max_length: Description can not be longer than {{ limit }} characters.

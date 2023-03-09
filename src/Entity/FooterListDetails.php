@@ -56,7 +56,7 @@ class FooterListDetails implements FooterListDetailsInterface
     {
         return $this->description;
     }
-    public function setFooterList(FooterListInterface $footerList)
+    public function setFooterList(?FooterListInterface $footerList)
     {
         $this->footerList = $footerList;
     }
