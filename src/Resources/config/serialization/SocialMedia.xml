@@ -27,6 +27,12 @@
             <group>admin:social:update</group>
             <group>shop:social:read</group>
         </attribute>
+        <attribute name="url">
+            <group>admin:social:create</group>
+            <group>admin:social:read</group>
+            <group>admin:social:update</group>
+            <group>shop:social:read</group>
+        </attribute>
         <attribute name="phoneNumber">
             <group>admin:social:create</group>
             <group>admin:social:read</group>

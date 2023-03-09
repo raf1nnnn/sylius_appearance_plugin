@@ -37,7 +37,7 @@ final class SocialMediaType extends AbstractResourceType
                 'label' => 'dotit_sylius_appearance_plugin.form.store.slug',
             ])
             ->add('url', TextType::class, [
-                'label' => 'sylius.ui.name',
+                'label' => 'dotit_sylius_appearance_plugin.form.store.url',
             ])
             ->add('enabled', CheckboxType::class, [
                 'label' => 'sylius.ui.enabled',

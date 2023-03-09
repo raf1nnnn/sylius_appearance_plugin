@@ -43,15 +43,9 @@ sylius_grid:
                 name:
                     type: string
                     label: sylius.ui.name
-                email:
-                    type: string
-                    label: sylius.ui.email
                 enabled:
                     type: boolean
                     label: sylius.ui.enabled
-                picking:
-                    type: boolean
-                    label: Picking
                 createdAt:
                     type: date
                     label: sylius.ui.creation_date

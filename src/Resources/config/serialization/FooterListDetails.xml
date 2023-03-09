@@ -25,6 +25,12 @@
             <group>admin:footer:read</group>
             <group>shop:footer:read</group>
         </attribute>
+        <attribute name="enabled">
+            <group>admin:footer:create</group>
+            <group>admin:footer:read</group>
+            <group>admin:footer:update</group>
+            <group>shop:footer:read</group>
+        </attribute>
         <attribute name="updatedAt">
             <group>admin:footer:read</group>
             <group>shop:footer:read</group>

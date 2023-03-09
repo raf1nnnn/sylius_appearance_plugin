@@ -34,6 +34,7 @@
         <property name="name" required="true"/>
         <property name="email" required="true"/>
         <property name="address" required="true"/>
+        <property name="url" required="true"/>
         <property name="phoneNumber" required="true"/>
         <property name="longitude" required="true"/>
         <property name="latitude" required="true"/>

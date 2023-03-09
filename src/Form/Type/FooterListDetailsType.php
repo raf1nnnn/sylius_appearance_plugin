@@ -47,21 +47,24 @@ class FooterListDetailsType extends AbstractResourceType
             'validation_groups' => function (FormInterface $form): array {
                 /** @var FooterListDetailsInterface|null $socialMedia */
                 $socialMedia = $form->getData();
-                $footerList = $socialMedia->getFooterList();
-                $slugs = array();
-                $names = array();
-                foreach ($footerList->getFooterListDetails() as $detail) {
-                    if (in_array($detail->getSlug(), $slugs)) {
-                        $form->get('slug')->addError(new FormError('The slug is duplicated.'));
+                if ($socialMedia) {
+                    $footerList = $socialMedia->getFooterList();
+
+                    $slugs = array();
+                    $names = array();
+                    foreach ($footerList->getFooterListDetails() as $detail) {
+                        if (in_array($detail->getSlug(), $slugs)) {
+                            $form->get('slug')->addError(new FormError('The slug is duplicated.'));
+                        }
+                        if (in_array($detail->getName(), $names)) {
+                            $form->get('name')->addError(new FormError('The name is duplicated.'));
+                        }
+                        $slugs[] = $detail->getSlug();
+                        $names[] = $detail->getName();
                     }
-                    if (in_array($detail->getName(), $names)) {
-                        $form->get('name')->addError(new FormError('The name is duplicated.'));
-                    }
-                    $slugs[] = $detail->getSlug();
-                    $names[] = $detail->getName();
                 }
 
-                if ($socialMedia instanceof FooterListDetailsInterface || null === $socialMedia->getId()) {
+                if (!$socialMedia instanceof FooterListDetailsInterface || null === $socialMedia->getId()) {
                     return array_merge($this->validationGroups, ['dotit_list_create']);
                 }
                 return $this->validationGroups;

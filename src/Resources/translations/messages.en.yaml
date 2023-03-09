@@ -20,6 +20,7 @@ dotit_sylius_appearance_plugin:
         manage_footer_lists: Manage Social
         manage_footer_list: Manage Footer list
         edit_footer_list : Edit Footer List
+        edit_social_media : Edit Social Media
 
         name: Name
     menu:
@@ -46,6 +47,7 @@ dotit_sylius_appearance_plugin:
             extra_emails: Extra emails
             longitude: Longitude
             latitude: Latitude
+            url: Url
             picking: Picking
             footer_list_details : Footer List Details
         footer_list:
