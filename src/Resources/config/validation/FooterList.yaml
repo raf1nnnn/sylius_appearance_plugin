@@ -22,7 +22,7 @@ Dotit\SyliusAppearancePlugin\Entity\FooterList:
           groups: ['dotit_logo_create']
     description:
       - NotBlank:
-          message: 'dotit_sylius_appearance_plugin.footer_list.url.not_blank'
+          message: 'dotit_sylius_appearance_plugin.footer_list.description.not_blank'
           groups: [ 'dotit_logo_create' ]
       - Length:
           min: 2

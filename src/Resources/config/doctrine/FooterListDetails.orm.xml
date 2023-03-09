@@ -10,7 +10,12 @@
         <id name="id" column="id" type="integer">
             <generator strategy="AUTO"/>
         </id>
-
+        <field name="createdAt" type="datetime" column="created_at">
+            <gedmo:timestampable on="create"/>
+        </field>
+        <field name="updatedAt" type="datetime" column="updated_at">
+        <gedmo:timestampable on="update"/>
+        </field>
         <field name="name" type="string" unique="true"/>
         <field name="slug" type="string" unique="true"/>
         <field name="description" type="text" nullable="true"/>
