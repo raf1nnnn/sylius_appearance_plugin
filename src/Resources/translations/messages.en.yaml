@@ -65,3 +65,4 @@ dotit_sylius_appearance_plugin:
             picking: Picking
             footer_list_details: Footer List Details
             details : Details
+            url: Url

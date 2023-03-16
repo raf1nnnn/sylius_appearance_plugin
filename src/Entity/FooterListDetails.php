@@ -14,6 +14,7 @@ class FooterListDetails implements FooterListDetailsInterface
     protected ?string $name = null;
     protected ?string $slug = null;
     protected ?string $description = null;
+    protected ?string $url = null;
     protected ?FooterListInterface $footerList = null;
 
     public function __construct()
@@ -56,13 +57,27 @@ class FooterListDetails implements FooterListDetailsInterface
     {
         return $this->description;
     }
+
     public function setFooterList(?FooterListInterface $footerList)
     {
         $this->footerList = $footerList;
     }
 
-    public function getFooterList():FooterListInterface{
+    public function getFooterList(): FooterListInterface
+    {
         return $this->footerList;
+    }
+
+    // Getter method for the "url" property
+    public function getUrl(): ?string
+    {
+        return $this->url;
+    }
+
+    // Setter method for the "url" property
+    public function setUrl(?string $url): void
+    {
+        $this->url = $url;
     }
 
 }

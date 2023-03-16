@@ -21,6 +21,12 @@
             <group>admin:footer:update</group>
             <group>shop:footer:read</group>
         </attribute>
+        <attribute name="url">
+            <group>admin:footer:create</group>
+            <group>admin:footer:read</group>
+            <group>admin:footer:update</group>
+            <group>shop:footer:read</group>
+        </attribute>
         <attribute name="createdAt">
             <group>admin:footer:read</group>
             <group>shop:footer:read</group>

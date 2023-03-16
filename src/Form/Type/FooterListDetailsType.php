@@ -33,6 +33,9 @@ class FooterListDetailsType extends AbstractResourceType
             ->add('name', TextType::class, [
                 'label' => 'sylius.ui.name',
             ])
+            ->add('url', TextType::class, [
+                'label' => 'dotit_sylius_appearance_plugin.form.footer_list.url',
+            ])
             ->add('slug', TextType::class, [
                 'label' => 'sylius.ui.slug',
             ]);
@@ -58,6 +61,10 @@ class FooterListDetailsType extends AbstractResourceType
                         }
                         if (in_array($detail->getName(), $names)) {
                             $form->get('name')->addError(new FormError('The name is duplicated.'));
+                        }
+                        if($detail->getUrl()== null){
+                            $form->get('url')->addError(new FormError('The Url cannot be empty.'));
+
                         }
                         $slugs[] = $detail->getSlug();
                         $names[] = $detail->getName();

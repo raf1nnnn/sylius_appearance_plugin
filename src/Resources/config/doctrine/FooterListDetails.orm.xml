@@ -19,6 +19,7 @@
         <field name="name" type="string" unique="true"/>
         <field name="slug" type="string" unique="true"/>
         <field name="description" type="text" nullable="true"/>
+        <field name="url" type="text" nullable="true"/>
         <field name="enabled" type="boolean"/>
 
         <many-to-one field="footerList" target-entity="Dotit\SyliusAppearancePlugin\Entity\FooterList" inversed-by="footerListDetails">
