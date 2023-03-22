@@ -32,9 +32,10 @@ final class SocialMediaUploader implements SocialMediaUploaderInterface
             $this->remove($socialMedia->getLogoName());
         }
 
-        do {
-            $path = $this->name($file);
-        } while ($this->isAdBlockingProne($path) || $this->filesystem->has($path));
+//        do {
+//            $path = $this->name($file);
+//        } while ($this->isAdBlockingProne($path) || $this->filesystem->has($path));
+        $path = $this->name($file);
 
         $socialMedia->setLogoName($path);
 
