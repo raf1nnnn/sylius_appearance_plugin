@@ -12,6 +12,9 @@
             <collectionOperation name="shop_get">
                 <attribute name="method">GET</attribute>
                 <attribute name="path">/shop/social-medias</attribute>
+                <attribute name="filters">
+                    <attribute>social_media.boolean_filter</attribute>
+                </attribute>
                 <attribute name="normalization_context">
                     <attribute name="groups">shop:social:read</attribute>
                 </attribute>

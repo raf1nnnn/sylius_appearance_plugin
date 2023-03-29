@@ -1,0 +1,5 @@
+Dotit\SyliusAppearancePlugin\Entity\SocialMedia:
+  operations:
+    ApiPlatform\Metadata\GetCollection:
+      filters: ['social_media.boolean_filter']
+
