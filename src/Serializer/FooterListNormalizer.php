@@ -30,11 +30,13 @@ final class FooterListNormalizer implements ContextAwareNormalizerInterface, Nor
 
         $data = $this->normalizer->normalize($object, $format, $context);
 
-        foreach ($data['footerListDetails'] as $key => $value) {
+         foreach ($data['footerListDetails'] as $key => $value) {
             if (!$value['enabled']) {
-                    array_splice($data['footerListDetails'], $key, 1);
+                    unset($data['footerListDetails'][$key]);
             }
         }
+        
+        $data['footerListDetails'] = array_values($data['footerListDetails']);
 
         return $data;
     }
