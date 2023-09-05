@@ -3,6 +3,7 @@ imports:
     - { resource: services/event_listener.yaml }
     - { resource: services/form.yaml }
     - { resource: services/uploader.yaml }
+    - { resource: services/serializer.yaml }
 
 services:
     footer_list.boolean_filter:
