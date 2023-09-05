@@ -1,0 +1,7 @@
+services:
+    dotit_sylius_appearance_plugin.serializer.footer_list_normalizer:
+        class: Dotit\SyliusAppearancePlugin\Serializer\FooterListNormalizer
+        arguments:
+            - '@api_platform.serializer.normalizer.item'
+        tags:
+            - { name: 'serializer.normalizer', priority: 100 }
